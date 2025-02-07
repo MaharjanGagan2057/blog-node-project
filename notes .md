@@ -1,4 +1,4 @@
-##To start project:
+## To start project:
 1.create an folder an open in vs code
 2.open cmd and command nmp init
 3.create a new folder inside and name app.js and wiite this mandetory code:
@@ -21,8 +21,14 @@ app.listen(3000),()=>{
 
 
 
-##Templating Enging(for dynamic content)
+
+## Templating Enging(for dynamic content)
 ejs.js
 
 ##semetric versioning (verson of any applications like node ,ejs games ets )  asken in interview
 "major.minor.patch"= example = "3.1.2"(3 is major the first place ,1 is minor in second place,2 is patch in third place)
+
+## Tips and Hacks
+1.Auto Refresh page:
+ <!-- to auto refresh page the time you want  set inside content inside header tag -->
+    <meta http-equiv="refresh" content="0.2">

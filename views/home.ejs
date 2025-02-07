@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- to auto refresh page the tiem you want  set inside content inside header tag -->
+    <meta http-equiv="refresh" content="0.2">
     <title>Simple Webpage</title>
     <style>
         * {
@@ -49,11 +51,7 @@
     </style>
 </head>
 <body>
-    <div class="navbar">
-       <a href="/">Home</a>
-       <a href="">Contact</a>
-       <a href="/about">About</a>
-    </div>
+    <%- include ('navbar.ejs')%>
     <div class="body-section">
         <h2>Welcome to the Body Section</h2>
         <p>This is the main content area.</p>
@@ -70,8 +68,6 @@
             <div class="card">Card 10</div>
         </div>
     </div>
-    <div class="footer">
-        <p>Footer &copy; 2025</p>
-    </div>
 </body>
+<%-include('footer.ejs')%>
 </html>
