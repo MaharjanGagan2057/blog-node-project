@@ -32,3 +32,5 @@ ejs.js
 1.Auto Refresh page:
  <!-- to auto refresh page the time you want  set inside content inside head tag -->
     <meta http-equiv="refresh" content="0.2">
+
+2.
