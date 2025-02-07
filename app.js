@@ -21,3 +21,8 @@ app.get("/",(req,res)=>{
 app.get("/about",(req,res)=>{
     res.render("about")
 })
+
+//contact page(inserting contact page)
+app.get("/contact",(req,res)=>{
+    res.render("contact")
+})

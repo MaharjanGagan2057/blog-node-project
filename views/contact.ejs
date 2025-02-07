@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- to auto refresh page the tiem you want  set inside content inside header tag -->
-    <meta http-equiv="refresh" content="30s">
-    <title>Simple Webpage</title>
+    <title>Contact Us</title>
     <style>
-        * {
+         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -19,7 +17,6 @@
             min-height: 100vh;
         }
         .navbar {
-            height: 3rem;
             background: #7e6565;
             color: rgb(27, 25, 25);
             padding: 15px;
@@ -31,12 +28,9 @@
             text-align: center;
         }
         .cards {
-
-            background-color: aquamarine;
-            color: rgb(21, 21, 21);
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
+            gap: 20px;
             padding: 20px;
         }
         .card {
@@ -55,23 +49,24 @@
     </style>
 </head>
 <body>
-    <%- include ('navbar.ejs')%>
-    <div class="body-section">
-        <h2>Welcome to the Body Section</h2>
-        <p>This is the main content area.</p>
-        <div class="cards">
-            <div class="card">Card 1</div>
-            <div class="card">Card 2</div>
-            <div class="card">Card 3</div>
-            <div class="card">Card 4</div>
-            <div class="card">Card 5</div>
-            <div class="card">Card 6</div>
-            <div class="card">Card 7</div>
-            <div class="card">Card 8</div>
-            <div class="card">Card 9</div>
-            <div class="card">Card 10</div>
+    <div class="navbar">
+        <%- include ("navbar.ejs") %>
+    </div>
+    <h2>Contact Us</h2>
+    <div class="contact-section">
+        <h2>Get in Touch</h2>
+        <p>We would love to hear from you! Fill out the form below and we will get back to you as soon as possible.</p>
+        <div class="contact-form">
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </div>
+    <div class="footer">
+       <%- include('footer.ejs') %>
+    </div>
 </body>
-<%-include('footer.ejs')%>
 </html>
