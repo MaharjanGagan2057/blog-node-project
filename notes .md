@@ -34,3 +34,12 @@ ejs.js
     <meta http-equiv="refresh" content="0.2">
 
 2.
+
+
+
+
+
+
+
+const express=require('express');
+const app=express();
