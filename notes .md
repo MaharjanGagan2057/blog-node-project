@@ -25,7 +25,7 @@ app.listen(3000),()=>{
 ## Templating Enging(for dynamic content)
 ejs.js
 
-##semetric versioning (verson of any applications like node ,ejs games ets )  asken in interview
+## semetric versioning (verson of any applications like node ,ejs games ets )  asken in interview
 "major.minor.patch"= example = "3.1.2"(3 is major the first place ,1 is minor in second place,2 is patch in third place)
 
 ## Tips and Hacks
