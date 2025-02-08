@@ -8,6 +8,8 @@ app.listen(3000),()=>{
     console.log(`nodejs project is running on port $(port)`);
 }
 
+// insertink or linking backend sql ,sequalize file of index.js to the main file app.js
+require("./model/index")
 
 // telling node.js to set its view engine to ejs
 app.set('view engine','ejs')
