@@ -1,0 +1,251 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Content Creation Platform</title>  
+    <style>  
+        * {  
+            margin: 0;  
+            padding: 0;  
+            box-sizing: border-box;  
+        }  
+
+        :root {  
+            --primary-color: #3498db;  
+            --secondary-color: #2ecc71;  
+            --background-color: #f4f4f4;  
+            --text-color: #333;  
+        }  
+
+        body {  
+            font-family: 'Arial', sans-serif;  
+            line-height: 1.6;  
+            background-color: var(--background-color);  
+        }  
+
+        /* Navigation Styles */  
+        .navbar {  
+            background-color: var(--primary-color);  
+            color: white;  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            padding: 15px 50px;  
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+        }  
+
+        .navbar-logo {  
+            font-size: 24px;  
+            font-weight: bold;  
+        }  
+
+        .navbar-links {  
+            display: flex;  
+            gap: 20px;  
+        }  
+
+        .navbar-links a {  
+            color: white;  
+            text-decoration: none;  
+            transition: color 0.3s ease;  
+        }  
+
+        .navbar-links a:hover {  
+            color: var(--secondary-color);  
+        }  
+
+        /* Form Container Styles */  
+        .form-container {  
+            max-width: 600px;  
+            margin: 50px auto;  
+            background-color: white;  
+            padding: 40px;  
+            border-radius: 10px;  
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);  
+        }  
+
+        .form-title {  
+            text-align: center;  
+            margin-bottom: 30px;  
+            color: var(--primary-color);  
+        }  
+
+        .form-group {  
+            margin-bottom: 20px;  
+        }  
+
+        .form-label {  
+            display: block;  
+            margin-bottom: 8px;  
+            font-weight: bold;  
+        }  
+
+        .form-input,  
+        .form-textarea {  
+            width: 100%;  
+            padding: 10px;  
+            border: 1px solid #ddd;  
+            border-radius: 5px;  
+            transition: all 0.3s ease;  
+        }  
+
+        .form-input:focus,  
+        .form-textarea:focus {  
+            border-color: var(--primary-color);  
+            outline: none;  
+            box-shadow: 0 0 5px rgba(52,152,219,0.5);  
+        }  
+
+        .form-textarea {  
+            resize: vertical;  
+            min-height: 150px;  
+        }  
+
+        .submit-btn {  
+            width: 100%;  
+            padding: 12px;  
+            background-color: var(--primary-color);  
+            color: white;  
+            border: none;  
+            border-radius: 5px;  
+            cursor: pointer;  
+            transition: background-color 0.3s ease;  
+        }  
+
+        .submit-btn:hover {  
+            background-color: #2980b9;  
+        }  
+
+        /* Footer Styles */  
+        .footer {  
+            background-color: #333;  
+            color: white;  
+            text-align: center;  
+            padding: 20px;  
+            position: fixed;  
+            bottom: 0;  
+            width: 100%;  
+        }  
+
+        .footer-links {  
+            display: flex;  
+            justify-content: center;  
+            gap: 20px;  
+            margin-top: 10px;  
+        }  
+
+        .footer-links a {  
+            color: white;  
+            text-decoration: none;  
+            transition: color 0.3s ease;  
+        }  
+
+        .footer-links a:hover {  
+            color: var(--secondary-color);  
+        }  
+
+        /* Responsive Design */  
+        @media (max-width: 768px) {  
+            .navbar {  
+                flex-direction: column;  
+                padding: 15px;  
+            }  
+
+            .navbar-links {  
+                margin-top: 15px;  
+            }  
+
+            .form-container {  
+                margin: 20px;  
+                padding: 20px;  
+            }  
+        }  
+    </style>  
+</head>  
+<body>  
+    <!-- Navigation Bar -->  
+    <nav class="navbar">  
+        <div class="navbar-logo">Content Creator</div>  
+        <div class="navbar-links">  
+            <a href="/">Home</a>  
+            <a href="/contact">Contact</a>  
+            <a href="/about">About</a>  
+            <a href="/addBlogs">Blogs</a>  
+        </div>  
+    </nav>  
+
+    <!-- Form Container -->  
+    <div class="form-container">  
+        <h2 class="form-title">Create New Content</h2>  
+
+        <form  action="/addBlog" method="post" id="contentForm">  
+
+            <div class="form-group">  
+                <label for="title" class="form-label">Title</label>  
+                <input   
+                    type="text"   
+                    id="title"   
+                    class="form-input"   
+                    placeholder="Enter content title"   
+                    required  
+                >  
+            </div>  
+
+            <div class="form-group">  
+                <label for="subtitle" class="form-label">Subtitle</label>  
+                <input   
+                    type="text"   
+                    id="subtitle"   
+                    class="form-input"   
+                    placeholder="Enter content subtitle"  
+                >  
+            </div>  
+
+            <div class="form-group">  
+                <label for="description" class="form-label">Description</label>  
+                <textarea   
+                    id="description"   
+                    class="form-textarea"   
+                    placeholder="Write detailed description here..."  
+                    required  
+                ></textarea>  
+            </div>  
+
+            <button type="submit" class="submit-btn">  
+                Submit Content  
+            </button>  
+        </form>  
+    </div>  
+
+    <!-- Footer -->  
+    <footer class="footer">  
+        <div>  
+            © 2025 Content Creator Platform. All Rights Reserved.  
+        </div>  
+        <div class="footer-links">  
+            <a href="#">Privacy Policy</a>  
+            <a href="#">Terms of Service</a>  
+            <a href="#">Contact Us</a>  
+        </div>  
+    </footer>  
+
+    <script>  
+        document.getElementById('contentForm').addEventListener('submit', function(e) {  
+            e.preventDefault();  
+            const title = document.getElementById('title').value;  
+            const subtitle = document.getElementById('subtitle').value;  
+            const description = document.getElementById('description').value;  
+
+            // Basic form validation  
+            if (title && description) {  
+                console.log({title, subtitle, description});  
+                alert('Content submitted successfully!');  
+                this.reset(); // Reset form after submission  
+            } else {  
+                alert('Please fill in required fields');  
+            }  
+        });  
+    </script>  
+</body>  
+</html>

@@ -6,10 +6,16 @@
 const express=require('express');
 const app=express();
 
+<!-- setting port constant to port=3000 -->
 const port=3000;
 app.listen(3000),()=>{
     console.log(`nodejs project is running on port $(port)`);
 }
+
+  <!--  telling nodejs that data is comming form backend -->
+app.use(express.urlencoded({extended :true}))
+app.use(express.json())
+
 4. npm install express /npm i express (after install check in package.json file  ) 
 5. npm install nodemoon (after install check in package.json file )
 6. npm start and see live changes in server and cmd of  currentproject
@@ -18,11 +24,13 @@ app.listen(3000),()=>{
 9.create a new 'views'  folder name all of letter in small letter must be this.
 10. npm i squelize (intall squelize in nodejs)
 11. npm i mysql2(install mysql version 2)
-12.install xamp in your computer to run mysql
+12.install xampp in your computer to run mysql
 
 
 ## for database
 mySql2 (meaning mysql version 2)
+
+## CRUD operation(create read update delete)
 
 
 
