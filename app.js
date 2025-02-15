@@ -45,14 +45,18 @@ app.post("/addblog",async(req,res)=>{
     
 // object desctucrting using ejs function
  const{title,subtitle,description} = req.body
+//  securing serverver site render(SSR) from hacker by adding this condition necessary to fillup 
+ if(!title || !subtitle || !description){
+    return res.send("please provide title ,subtitle,description")
+ }
     
  
- // inserting into blogs table  on backend need to await infront to run
+ // inserting into blogs table  on backend like nodejs ,laravel need to await infront to run
  await blogs.create({
      title : title,
      subtitle: subtitle,
      description: description
     })
-    res.send("Blog added sucessfully")
+    res.redirect("/")
     
 })
