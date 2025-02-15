@@ -1,3 +1,5 @@
+
+
 ## To start project:
 1. create an folder an open in vs code
 2. open cmd and command nmp init

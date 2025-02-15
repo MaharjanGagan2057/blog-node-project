@@ -1,4 +1,4 @@
-const dbConfig = require("../config/dbConfig.js");
+const dbConfig = require("/config/dbConfig.js");
 const { Sequelize, DataTypes } = require("sequelize");
 
 // la sequelize yo config haru lag ani database connect gardey vaneko hae 

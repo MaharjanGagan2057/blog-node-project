@@ -35,7 +35,7 @@ app.get("/contact",(req,res)=>{
 })
 
 // add blog page
-app.get("/addblog",(req,res)=>{
+app.get("/addBlog",(req,res)=>{
     res.render("addBlog")
 })
 
